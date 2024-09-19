@@ -1,6 +1,7 @@
 import { Button } from '@material-ui/core';
 import './App.css';
 import { useEffect, useState } from 'react';
+import { getTesting, putTesting } from '@api/client';
 
 function App() {
   const [putData, setPutData] = useState();
@@ -8,10 +9,8 @@ function App() {
   const [loading, setLoading] = useState<boolean>(false);
   const loadMock = () => {
     setLoading(true);
-    const promise1: Promise<Response> = fetch('api/testing');
-    const promise2: Promise<Response> = fetch('api/testing', {
-      method: 'PUT',
-    });
+    const promise1: Promise<Response> = getTesting();
+    const promise2: Promise<Response> = putTesting();
     const promises = [promise1, promise2].map((pr) => pr.then((res) => res.json()));
     Promise.all(promises)
       .then(([res1, res2]) => {
