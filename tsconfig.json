@@ -7,7 +7,7 @@
     "skipLibCheck": true,
 
     /* Bundler mode */
-    "moduleResolution": "bundler",
+    "moduleResolution": "Bundler",
     "allowImportingTsExtensions": true,
     "resolveJsonModule": true,
     "isolatedModules": true,
@@ -23,13 +23,13 @@
     /* Paths */
     "baseUrl": "./src",
     "paths": {
-      "@api/*": ["shared/api/*"],
-      "@ui/*": ["shared/ui/*"],
-      "@pages/*": ["pages/*"],
-      "@features/*": ["features/*"],
-      "@widgets/*": ["widgets/*"],
-      "@entities/*": ["entities/*"],
-      "@assets/*": ["assets/*"]
+      "@api*": ["shared/api*"],
+      "@ui*": ["shared/ui*"],
+      "@pages*": ["pages*"],
+      "@features*": ["features*"],
+      "@widgets*": ["widget/*"],
+      "@entities*": ["entities*"],
+      "@assets*": ["assets*"]
     }
   },
   "include": ["src"],

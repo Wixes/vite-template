@@ -30,7 +30,9 @@ function App() {
 
   return (
     <div>
-      <Button onClick={loadMock}>Load mock</Button>
+      <Button onClick={loadMock} variant={'contained'}>
+        Load mock
+      </Button>
       {loading && <h4>Loading...</h4>}
     </div>
   );
