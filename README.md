@@ -32,4 +32,14 @@ OR
 yarn
 ```
 
-3. Start coding right away!
+3. Start development server:
+
+```
+npm run dev
+```
+
+### Now you are ready to code!
+
+### P.S.:
+
+- _eslint-plugin-import_ is easily to break! Make sure to read limitations of _--fix_ if you have any trouble! [docs](https://github.com/import-js/eslint-plugin-import/blob/HEAD/docs/rules/order.md)
