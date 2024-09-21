@@ -43,3 +43,5 @@ npm run dev
 ### P.S.:
 
 - _eslint-plugin-import_ is easily to break! Make sure to read limitations of _--fix_ if you have any trouble! [docs](https://github.com/import-js/eslint-plugin-import/blob/HEAD/docs/rules/order.md)
+- I have included vscode folder with settings to format code on save, organize and sort imports so your IDE did not end up with a lot of errors every time you are coding! Feel free to remove it
+  if you don't need this configurations!
