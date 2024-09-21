@@ -1,7 +1,8 @@
 import { Button } from '@material-ui/core';
-import './App.css';
 import { useEffect, useState } from 'react';
+
 import { getTesting, putTesting } from '@api/client';
+import './App.css';
 
 function App() {
   const [putData, setPutData] = useState();
