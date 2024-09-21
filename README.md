@@ -1,30 +1,35 @@
-# React + TypeScript + Vite
+# Vite template for quick start in React-based application development!
+
+## [Based on default vite application](https://vitejs.dev/guide/)
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-Currently, two official plugins are available:
+### Basic features includes:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Prepared [FSD](https://feature-sliced.design/docs) architecture for development
+- Configured [MSW v2+](https://mswjs.io/docs/getting-started) library for creating mocks as if you are working with the network
+- [MUI v6]() for speed up development process
+- [react-router-dom v6](https://reactrouter.com/en/main/start/overview) for client side routing
+- [valtio v2](https://github.com/pmndrs/valtio) for state management with configured [eslint-plugin-valtio](https://github.com/pmndrs/eslint-plugin-valtio)
+- Default eslint rules with sorting import configuration (based on [sort-imports](https://eslint.org/docs/latest/rules/sort-imports) and [eslint-plugin-import](https://github.com/import-js/eslint-plugin-import))
+- Prepared _absolute_ imports resolved by [vite-tsconfig-paths](https://github.com/aleclarson/vite-tsconfig-paths) for making life easier
 
-## Expanding the ESLint configuration
+## Feel free to expand it to fit your needs
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+# Getting started:
 
-- Configure the top-level `parserOptions` property like this:
+1. Clone this repository to your local folder:
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
+```
+git clone https://github.com/Wixes/vite-template .
 ```
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+2. **Install** packages:
+
+```
+npm install
+OR
+yarn
+```
+
+3. Start coding right away!

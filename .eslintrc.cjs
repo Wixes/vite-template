@@ -7,6 +7,7 @@ module.exports = {
     'plugin:react-hooks/recommended',
     'plugin:import/recommended',
     'plugin:import/typescript',
+    'plugin:valtio/recommended',
   ],
   ignorePatterns: ['dist', '.eslintrc.cjs', 'node_modules'],
   parser: '@typescript-eslint/parser',
