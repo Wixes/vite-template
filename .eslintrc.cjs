@@ -5,54 +5,30 @@ module.exports = {
     'eslint:recommended',
     'plugin:@typescript-eslint/recommended',
     'plugin:react-hooks/recommended',
-    'plugin:import/recommended',
-    'plugin:import/typescript',
     'plugin:valtio/recommended',
   ],
   ignorePatterns: ['dist', '.eslintrc.cjs', 'node_modules'],
   parser: '@typescript-eslint/parser',
-  plugins: ['react-refresh'],
-  settings: {
-    'import/resolver': {
-      typescript: {
-        project: './tsconfig.json',
-      },
-    },
-  },
+  plugins: ['react-refresh', 'simple-import-sort'],
   rules: {
     'react-refresh/only-export-components': ['warn', { allowConstantExport: true }],
-    'sort-imports': [
-      'warn',
-      {
-        ignoreCase: false,
-        ignoreDeclarationSort: true,
-        ignoreMemberSort: false,
-        memberSyntaxSortOrder: ['none', 'all', 'multiple', 'single'],
-        allowSeparatedGroups: true,
-      },
-    ],
-    // turn on errors for missing imports
-    'import/no-unresolved': 'error',
-    // 'import/no-named-as-default-member': 'off',
-    'import/order': [
+    'simple-import-sort/imports': [
       'error',
       {
         groups: [
-          'builtin', // Built-in imports (come from NodeJS native) go first
-          'external', // <- External imports
-          'internal', // <- Absolute imports
-          ['sibling', 'parent'], // <- Relative imports, the sibling and parent types they can be mingled together
-          'index', // <- index imports
-          'unknown', // <- unknown
+          ['^react'], // Start with react
+          ['^@?\\w'], // Absolute imports w/o child
+          ['@(/.*|$)'], // Absolute imports with child
+          ['^\\.\\.(?!/?$)'], // Relative paths (../{file}) to files
+          ['^\\.\\./?$'], // Relatives paths (../) to index
+          ['^\\./(?=.*/)(?!/?$)'], // Current dir w/ child
+          ['^\\./?$'], // Current dir
+          ['^\\.(?!/?$)'], // config files (.{name})
+          ['^.+\\.?(scss)$'], // scss files
+          ['^.+\\.?(css)$'], // css files
         ],
-        'newlines-between': 'always',
-        alphabetize: {
-          /* sort in ascending order. Options: ["ignore", "asc", "desc"] */
-          order: 'asc',
-          /* ignore case. Options: [true, false] */
-          caseInsensitive: true,
-        },
       },
     ],
+    'simple-import-sort/exports': 'error',
   },
 };
