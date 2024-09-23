@@ -19,6 +19,7 @@ module.exports = {
           ['^react'], // Start with react
           ['^@?\\w'], // Absolute imports w/o child
           ['@(/.*|$)'], // Absolute imports with child
+          ['^\\u0000'], // Side effect imports
           ['^\\.\\.(?!/?$)'], // Relative paths (../{file}) to files
           ['^\\.\\./?$'], // Relatives paths (../) to index
           ['^\\./(?=.*/)(?!/?$)'], // Current dir w/ child
