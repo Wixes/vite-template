@@ -11,7 +11,7 @@ This template provides a minimal setup to get React working in Vite with HMR and
 - [MUI v6]() for speed up development process
 - [react-router-dom v6](https://reactrouter.com/en/main/start/overview) for client side routing
 - [valtio v2](https://github.com/pmndrs/valtio) for state management with configured [eslint-plugin-valtio](https://github.com/pmndrs/eslint-plugin-valtio)
-- Default eslint rules with sorting import configuration (based on [sort-imports](https://eslint.org/docs/latest/rules/sort-imports) and [eslint-plugin-import](https://github.com/import-js/eslint-plugin-import))
+- Default eslint rules with sorting import configuration (based on [eslint-plugin-simple-import-sort](https://github.com/lydell/eslint-plugin-simple-import-sort))
 - Prepared _absolute_ imports resolved by [vite-tsconfig-paths](https://github.com/aleclarson/vite-tsconfig-paths) for making life easier
 
 ## Feel free to expand it to fit your needs
@@ -42,8 +42,7 @@ npm run dev
 
 ### P.S.:
 
-- _eslint-plugin-import_ is easily to break! Make sure to read limitations of _--fix_ if you have any trouble! [docs](https://github.com/import-js/eslint-plugin-import/blob/HEAD/docs/rules/order.md)
-- I'm strongly recommend to setup your IDE with "format on save", "sort imports" and all this stuff to comfortably work with imports! Example config for **VSCode**:
+> I'm strongly recommend to setup your IDE with "format on save", "sort imports" and all this stuff to comfortably work with imports! Example config for **VSCode**:
 
 ```
 {
