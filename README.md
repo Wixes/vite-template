@@ -42,7 +42,7 @@ npm run dev
 
 ### P.S.:
 
-> I'm strongly recommend to setup your IDE with "format on save", "sort imports" and all this stuff to comfortably work with imports! Example config for **VSCode**:
+> I'm strongly recommend to setup your IDE with "format on save", "sort imports" and all this stuff to comfortably work with imports! Example config for **VSCode** (put it in **.vscode/settings.json**):
 
 ```
 {
